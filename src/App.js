@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './abstracts.scss';
+import './scss/abstracts.scss';
+import './scss/typography.scss';
 import './App.scss';
 
 import Navbar from './components/Navbar/Navbar';
