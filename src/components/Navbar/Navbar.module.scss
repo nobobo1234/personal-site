@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(var(--background-color), 1);
+  background-color: color(var(--background-color));
 
   &__name {
     flex-grow: 1;
@@ -26,26 +26,16 @@
   &__link:link, &__link:visited {
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: color(var(--text-color));
     font-size: 1.8rem;
     //border-bottom: 1px solid rgba(var(--text-color), 1);
     transform: translateY(0) scale(1);
     transition: all .2s;
-    padding: 0 1rem;
+    padding: .5rem 1rem;
 
     &:hover {
       transform: translateY(-.3rem) scale(1.1);
       box-shadow: 1rem .5rem 1rem rgba(0,0,0,.2);
     }
-  }
-
-  &__button {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgba(var(--background-color), 1);
-    font-size: 1.8rem;
-    background-color: rgba(var(--primary-color), 1);
-    padding: 1rem 2rem;
-    border-radius: 1rem;
   }
 }

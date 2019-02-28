@@ -9,7 +9,7 @@ const navbar = props => {
           <li><a href="/" className={styles['nav__link']}>About me</a></li>
           <li><a href="/" className={styles['nav__link']}>Speciality</a></li>
           <li><a href="/" className={styles['nav__link']}>Portfolio</a></li>
-          <li><a href="/" className={styles['nav__button']}>Contact me</a></li>
+          <li><a href="/" className="btn btn--cta">Contact me</a></li>
         </ul>
       </nav>
   )

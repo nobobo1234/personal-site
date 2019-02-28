@@ -1,3 +1,7 @@
+@import 'scss/abstracts';
+@import 'scss/button';
+@import 'scss/typography';
+
 .App {
   display: grid;
   grid-template-rows: 6rem calc(90vh - 6rem) repeat(5, min-content);

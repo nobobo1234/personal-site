@@ -4,7 +4,12 @@
   --background-color: 224, 242, 246;
   --text-color: 45, 41, 43;
   --text-color-accent: 113, 122, 107;
+  --test-color: #000000;
 
   --display-font: 'Source Sans Pro', sans-serif;
   --header-font: 'Open Sans', sans-serif;
+}
+
+@function color($var) {
+  @return rgba($var, 1);
 }
