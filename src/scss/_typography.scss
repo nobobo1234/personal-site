@@ -9,14 +9,24 @@
 
 .heading--2 {
   font-family: var(--header-font);
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  font-weight: 300;
+  color: color(var(--text-color));
+  font-weight: bold;
+  //font-weight: 300;
 }
 
 .heading--3 {
   font-size: 3rem;
   font-family: var(--header-font);
-  font-weight: 300;
-  color: color(var(--background-color));
+
+  &--light {
+    font-weight: 300;
+    color: color(var(--background-color));
+  }
+
+  &--dark {
+    font-weight: bold;
+    color: color(var(--text-color));
+  }
 }
