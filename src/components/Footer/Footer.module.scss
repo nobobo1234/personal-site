@@ -1,4 +1,11 @@
+@import "../../scss/abstracts";
+
 .footer {
-  background-color: yellow;
   grid-column: full-start / full-end;
+  background-color: color(var(--secondary-color));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
 }

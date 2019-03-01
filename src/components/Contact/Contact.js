@@ -4,7 +4,7 @@ import styles from './Contact.module.scss';
 const contact = props => {
   return (
     <section className={styles.contact}>
-      Contact
+      <h2 className="heading--2">Contact me</h2>
     </section>
   );
 };

@@ -1,3 +1,5 @@
+@import "../../scss/abstracts";
+
 .nav {
   grid-column: full-start / full-end;
   display: flex;
@@ -28,14 +30,22 @@
     text-transform: uppercase;
     color: color(var(--text-color));
     font-size: 1.8rem;
-    //border-bottom: 1px solid rgba(var(--text-color), 1);
-    transform: translateY(0) scale(1);
-    transition: all .2s;
     padding: .5rem 1rem;
+    position: relative;
 
-    &:hover {
-      transform: translateY(-.3rem) scale(1.1);
-      box-shadow: 1rem .5rem 1rem rgba(0,0,0,.2);
+    &::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      background-color: color(var(--text-color));
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all .3s;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }

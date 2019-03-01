@@ -1,7 +1,17 @@
+@import "./abstracts";
+
 .heading--1 {
   font-size: 6rem;
   font-family: var(--header-font);
   color: color(var(--background-color));
+  margin-left: -.2rem;
+}
+
+.heading--2 {
+  font-family: var(--header-font);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
 }
 
 .heading--3 {

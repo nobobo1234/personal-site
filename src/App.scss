@@ -3,6 +3,7 @@
 @import 'scss/typography';
 
 .App {
+  background-color: color(var(--background-color));
   display: grid;
   grid-template-rows: 6rem calc(90vh - 6rem) repeat(5, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr)
