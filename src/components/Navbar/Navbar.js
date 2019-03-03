@@ -1,5 +1,7 @@
 import React from 'react';
-import styles from './Navbar.module.scss'
+import styles from './Navbar.module.scss';
+
+import Button from '../Button/Button';
 
 const navbar = props => {
   return (
@@ -9,7 +11,7 @@ const navbar = props => {
           <li><a href="/" className={styles['nav__link']}>About me</a></li>
           <li><a href="/" className={styles['nav__link']}>Speciality</a></li>
           <li><a href="/" className={styles['nav__link']}>Portfolio</a></li>
-          <li><a href="/" className="btn btn--cta">Contact me</a></li>
+          <li><Button theme="cta">Contact me</Button></li>
         </ul>
       </nav>
   )

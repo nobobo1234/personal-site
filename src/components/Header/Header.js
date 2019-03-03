@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './Header.module.scss';
 
+import Button from '../Button/Button';
+import Heading from '../Heading/Heading';
+
 const header = props => {
   return (
     <header className={styles.header}>
-      <h1 className="heading--1">My name</h1>
-      <h3 className="heading--3 heading--3--light">Junior Front-end Web Developer</h3>
+      <Heading type="1">My name</Heading>
+      <Heading type="3" color="light" weight="thin">Junior Front-end Web Developer</Heading>
       <div className={styles['header__buttons']}>
-        <a href="/" className="btn btn--light">About me</a>
-        <a href="/" className="btn btn--cta">Contact me</a>
+        <Button theme="light">About me</Button>
+        <Button theme="cta">Contact me</Button>
       </div>
     </header>
   );
