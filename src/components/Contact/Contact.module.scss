@@ -8,3 +8,57 @@
     font-size: 1.6rem;
   }
 }
+
+.form {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  &__group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:last-of-type {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    outline: none;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-family: var(--display-font);
+    border-radius: 1rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    box-shadow: none;
+    transition: all .2s;
+
+    &:invalid {
+      border-bottom: 2px solid red;
+    }
+  }
+
+  &__label {
+    order: -1;
+    font-size: 1.4rem;
+    padding: .5rem;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-family: var(--display-font);
+    resize: none;
+    border-radius: 1rem;
+    border: none;
+    height: 25rem;
+  }
+
+  &__btn-icon {
+    margin-left: 1rem;
+  }
+}

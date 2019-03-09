@@ -7,6 +7,9 @@
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  justify-self: start;
 
   &--cta {
     background-color: color(var(--primary-color));
