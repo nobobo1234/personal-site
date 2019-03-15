@@ -8,8 +8,19 @@
                           [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
                           minmax(6rem, 1fr) [full-end];
 
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-rows: min-content calc(90vh - 6rem) repeat(5, min-content);
+    grid-template-columns: [full-start] minmax(3rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end]
+    minmax(3rem, 1fr) [full-end];
+  }
+
   & > * {
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 2rem;
+    }
   }
 
   section {

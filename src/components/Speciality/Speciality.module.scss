@@ -9,7 +9,8 @@
 
   &__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     column-gap: 3rem;
+    row-gap: 3rem;
   }
 }

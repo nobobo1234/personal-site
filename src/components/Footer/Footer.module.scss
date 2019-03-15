@@ -3,6 +3,8 @@
 .footer {
   grid-column: full-start / full-end;
   background-color: color(var(--secondary-color));
+  color: color(var(--background-color));
+  text-shadow: 1px 1px 1px color(var(--text-color));
 
   display: flex;
   justify-content: center;

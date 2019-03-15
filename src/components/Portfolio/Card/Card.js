@@ -4,7 +4,6 @@ import styles from './Card.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = props => {
-  console.log(props.technologies);
   return (
       <div className={styles.card}>
         <h4 className={styles['card__heading']}>{props.title}</h4>
@@ -20,7 +19,10 @@ const Card = props => {
         <div className={styles['card__used']}>Technologies used:</div>
         <div className={styles['card__icons']}>
           {props.technologies.map((e) => (
-            <FontAwesomeIcon icon={['fab', e]} />
+              // Ugly way of getting rid of the disalignment of the discord logo
+              e !== 'discord' ?
+                  <FontAwesomeIcon icon={['fab', e]} key={e} /> :
+                  <FontAwesomeIcon style={{ marginTop: '1.5px' }} icon={['fab', e]} key={e} />
           ))}
         </div>
       </div>

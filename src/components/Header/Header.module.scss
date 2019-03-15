@@ -14,6 +14,7 @@
   &::before {
     background-image: linear-gradient(rgba(var(--primary-color), .6), rgba(var(--primary-color), .6)), url("../../assets/header.jpg");
     background-size: cover;
+    background-position: center;
     filter: brightness(50%);
     content: "";
     width: 100%;
@@ -26,7 +27,10 @@
   &__buttons {
     margin-top: 2rem;
     display: flex;
-    column-gap: 1.5rem;
+
+    & > *:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__icon {
