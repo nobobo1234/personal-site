@@ -31,21 +31,6 @@
     color: color(var(--text-color));
     font-size: 1.8rem;
     padding: .5rem 1rem;
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 0;
-      height: 1px;
-      background-color: color(var(--text-color));
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transition: all .3s;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
+    @include underline();
   }
 }
