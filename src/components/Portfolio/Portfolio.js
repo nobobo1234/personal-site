@@ -6,7 +6,7 @@ import Card from './Card/Card';
 
 const portfolio = props => {
   return (
-    <section className={styles.portfolio}>
+    <section className={styles.portfolio} id="portfolio">
       <Heading type="3" color="dark" weight="normal">Portfolio</Heading>
       <div className={styles['portfolio__cards']}>
         <Card

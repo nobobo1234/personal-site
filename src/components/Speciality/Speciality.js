@@ -6,7 +6,7 @@ import Card from './Card/Card';
 
 const speciality = props => {
   return (
-    <section className={styles.speciality}>
+    <section className={styles.speciality} id="speciality">
       <Heading type="3" color="dark" weight="normal">Speciality</Heading>
       <div className={styles['speciality__cards']}>
         <Card

@@ -6,6 +6,10 @@
 
   &__text {
     font-size: 1.6rem;
+
+    &--red {
+      color: color(var(--text-color-accent));
+    }
   }
 }
 
@@ -65,4 +69,8 @@
   &__btn-icon {
     margin-left: 1rem;
   }
+}
+
+.invisible {
+  display: none;
 }

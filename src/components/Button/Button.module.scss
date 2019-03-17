@@ -10,6 +10,9 @@
   display: flex;
   justify-content: center;
   justify-self: start;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
 
   &--cta {
     background-color: color(var(--primary-color));

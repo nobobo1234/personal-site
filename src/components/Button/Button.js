@@ -1,9 +1,17 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-const Button = ({ children, theme }) => {
+import { Link } from 'react-scroll';
+
+const Button = ({ children, theme, to, onClick }) => {
   return (
-      <a href="/" className={[styles.btn, styles[`btn--${theme}`]].join(" ")}>{children}</a>
+      to ? (
+            <Link to={to} smooth={true} duration={700} className={[styles.btn, styles[`btn--${theme}`]].join(" ")}>
+              {children}
+            </Link>
+          ) : (
+            <button onClick={onClick} className={[styles.btn, styles[`btn--${theme}`]].join(" ")}>{children}</button>
+          )
   );
 };
 

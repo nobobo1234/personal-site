@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Navbar.module.scss';
 
 import Button from '../Button/Button';
+import { Link } from 'react-scroll';
 
 const navbar = props => {
   return (
@@ -9,22 +10,22 @@ const navbar = props => {
         <h3 className={styles['nav__name']}>Logo</h3>
         <ul className={styles['nav__links']}>
           <li>
-            <a href="/" className={styles['nav__link']}>
+            <Link to="about" className={styles['nav__link']} smooth={true} duration={700}>
               About me
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className={styles['nav__link']}>
+            <Link to="speciality" className={styles['nav__link']} smooth={true} duration={700}>
               Speciality
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className={styles['nav__link']}>
+            <Link to="portfolio" className={styles['nav__link']} smooth={true} duration={700}>
               Portfolio
-            </a>
+            </Link>
           </li>
           <li>
-            <Button theme="cta">
+            <Button to="contact" theme="cta">
               Contact me
             </Button>
           </li>

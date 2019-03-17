@@ -10,8 +10,10 @@ const header = props => {
       <Heading type="1">My name</Heading>
       <Heading type="3" color="light" weight="thin">Junior Front-end Web Developer</Heading>
       <div className={styles['header__buttons']}>
-        <Button theme="light">About me</Button>
-        <Button theme="cta">Contact me <i className={`material-icons ${styles['header__icon']}`}>email</i></Button>
+        <Button theme="light" to="about">About me</Button>
+        <Button theme="cta" to="contact">
+          Contact me <i className={`material-icons ${styles['header__icon']}`}>email</i>
+        </Button>
       </div>
     </header>
   );

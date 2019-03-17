@@ -5,7 +5,7 @@ import Heading from '../Heading/Heading';
 
 const about = props => {
   return (
-      <section className={styles.about}>
+      <section className={styles.about} id="about">
         <div className="information">
           <Heading type="2">Hello, I am myName. Nice to meet you.</Heading>
           <p className={styles['about__text']}>

@@ -39,12 +39,13 @@
     }
   }
 
-  &__link:link, &__link:visited {
+  &__link {
     text-decoration: none;
     text-transform: uppercase;
     color: color(var(--text-color));
     font-size: 1.8rem;
     padding: .5rem 1rem;
+    cursor: pointer;
     @include underline();
   }
 }
