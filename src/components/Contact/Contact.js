@@ -30,6 +30,9 @@ const contact = props => {
     }, 3000);
   };
 
+  const valid = () =>
+      !(name && email && query && email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/));
+
   return (
     <section className={styles.contact} id="contact">
       <Heading type="3" color="dark" weight="normal">Contact me</Heading>
@@ -67,7 +70,9 @@ const contact = props => {
               placeholder="Write your message here..." />
           <label htmlFor="query" className={styles['form__label']}>Message</label>
         </div>
-        <Button theme="cta" onClick={onFormClick}>Submit <i className={`material-icons ${styles['form__btn-icon']}`}>call_made</i></Button>
+        <Button theme="cta" onClick={onFormClick} disabled={valid()}>
+          Submit <i className={`material-icons ${styles['form__btn-icon']}`}>call_made</i>
+        </Button>
       </form>
     </section>
   );
