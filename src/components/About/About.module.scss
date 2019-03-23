@@ -9,6 +9,7 @@
   column-gap: 15rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  color: color(var(--text-color));
 
   @media only screen and (max-width: $bp-largest) {
     column-gap: 10rem;

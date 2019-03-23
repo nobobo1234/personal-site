@@ -3,7 +3,6 @@
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  color: color(var(--background-color));
   font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
@@ -21,11 +20,11 @@
 
   &--cta {
     background-color: color(var(--primary-color));
-    color: color(var(--background-color));
+    color: color(var(--text-white-accent));
   }
 
   &--light {
     background-color: color(var(--secondary-color));
-    color: color(var(--background-color));
+    color: color(var(--text-white-accent));
   }
 }

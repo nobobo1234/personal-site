@@ -3,7 +3,7 @@
 .heading-1 {
   font-size: 6rem;
   font-family: var(--header-font);
-  color: color(var(--background-color));
+  color: color(var(--text-white-accent));
   margin-left: -.2rem;
 }
 
@@ -20,7 +20,7 @@
   font-family: var(--header-font);
 
   &--light {
-    color: color(var(--background-color));
+    color: color(var(--text-white-accent));
   }
 
   &--dark {
