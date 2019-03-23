@@ -11,10 +11,14 @@
     flex-direction: column;
   }
 
-  &__name {
+  &__logo-container {
     flex-grow: 1;
     font-family: var(--header-font);
     font-weight: bold;
+  }
+
+  &__logo {
+    width: 9rem;
   }
 
   &__links {

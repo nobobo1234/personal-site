@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
 
+import logo from '../../assets/logo.png'
 import Button from '../Button/Button';
 import { Link } from 'react-scroll';
 
 const navbar = props => {
   return (
       <nav className={styles.nav}>
-        <h3 className={styles['nav__name']}>Logo</h3>
+        <div className={styles['nav__logo-container']}>
+          <img src={logo} alt="Logo" className={styles['nav__logo']}/>
+        </div>
         <ul className={styles['nav__links']}>
           <li>
             <Link to="about" className={styles['nav__link']} smooth={true} duration={700}>
