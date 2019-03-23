@@ -13,12 +13,12 @@
 
   &__logo-container {
     flex-grow: 1;
-    font-family: var(--header-font);
-    font-weight: bold;
+    padding: 1rem;
+    height: 6rem;
   }
 
   &__logo {
-    width: 9rem;
+    height: 100%;
   }
 
   &__links {

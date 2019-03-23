@@ -12,20 +12,23 @@ const speciality = props => {
         <Card
             title="Front-end"
             icon="computer"
-            workWith={['Lorem', 'Elit', 'Impedit']}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis distinctio, impedit porro quos rem sit.
+            workWith={['HTML', 'React', 'Javascript', 'Angular']}>
+          I love starting with nothing and beginning with nothing, and I also love coding. That's why I like making
+          websites for the browser such as this one.
         </Card>
         <Card
             title="Webpage design"
             icon="format_paint"
-            workWith={['Sint', 'Mollitia', 'Dolor']}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id mollitia natus, nihil sapiente sed sint!
+            workWith={['CSS', 'SCSS', 'CSS-in-JS']}>
+          I like thinking creatively and making a website look colorful and stunning, make it look minimalistic or
+          either full of animations. A lot of things are possible!
         </Card>
         <Card
             title="Interactive bots"
             icon="android"
-            workWith={['Amini', 'Doloremque', 'Voluptas']}>
-          Consectetur adipisicing elit. Animi architecto, doloremque quibusdam quod sed voluptas.
+            workWith={['Discord', 'Telegram', 'Twitter', 'Slack']}>
+          I enjoy coding bots for social platforms. It is something that is coming to life on social media and talking
+          on there like a real person.
         </Card>
       </div>
     </section>

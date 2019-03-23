@@ -37,7 +37,10 @@ const contact = props => {
     <section className={styles.contact} id="contact">
       <Heading type="3" color="dark" weight="normal">Contact me</Heading>
       <p className={styles['contact__text']}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut cumque debitis distinctio doloribus eveniet facilis fugiat maxime mollitia nobis, ratione repudiandae? Consequuntur, dolores expedita incidunt laborum magnam maiores odio!
+        If you're interested in working with me or you just wanna say hi you can contact me through this form.
+        I will respond as soon as possible. Thank you for your time! You can also contact me through social media using
+        one of the links below:
+        
       </p>
       <div className={[styles['contact__text'], styles['contact__text--red']].join(" ")}>{message}</div>
       <form action="#" className={styles.form}>
