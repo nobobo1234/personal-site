@@ -20,3 +20,11 @@ body {
   color: var(--text-color);
   //background-color: color(var(--background-color));
 }
+
+body[data-theme="dark"] {
+  --background-color: 26, 40, 43;
+  --primary-color: 38, 137, 145;
+  --secondary-color: 50, 105, 111;
+  --text-color: 197, 193, 195;
+  --text-color-accent: 128, 135, 124;
+}

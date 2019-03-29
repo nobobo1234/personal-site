@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import './App.scss';
 import './initIcons';
+import './i18n';
 
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
@@ -13,22 +14,24 @@ import Footer from './components/Footer/Footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/*# Navbar with nice logo (cta button)*/}
-        <Navbar />
-        {/*# Header (introduction) (cta button)*/}
-        <Header />
-        {/*# About Me with photo (resume)*/}
-        <About />
-        {/*# Speciality*/}
-        <Speciality />
-        {/*# Portfolio*/}
-        <Portfolio />
-        {/*# Contact me*/}
-        <Contact />
-        {/*# Footer with social account and contact information*/}
-        <Footer />
-      </div>
+        <Suspense fallback={<Footer />}>
+          <div className="App">
+            {/*# Navbar with nice logo (cta button)*/}
+            <Navbar />
+            {/*# Header (introduction) (cta button)*/}
+            <Header />
+            {/*# About Me with photo (resume)*/}
+            <About />
+            {/*# Speciality*/}
+            <Speciality />
+            {/*# Portfolio*/}
+            <Portfolio />
+            {/*# Contact me*/}
+            <Contact />
+            {/*# Footer with social account and contact information*/}
+            <Footer />
+          </div>
+        </Suspense>
     );
   }
 }

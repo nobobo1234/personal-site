@@ -23,6 +23,7 @@ const portfolio = props => {
       <div className={styles['portfolio__cards']}>
         {projects.map(project => (
             <Card
+              key={project.id}
               title={project.name}
               github={project.github}
               demo={project.demo}
