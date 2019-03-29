@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.scss';
+import { useTranslation } from "react-i18next";
 
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
@@ -9,6 +10,7 @@ const contact = props => {
   const [ email, setEmail ] = useState("");
   const [ query, setQuery ] = useState("");
   const [ message, setMessage ] = useState("");
+  const { t, i18n } = useTranslation();
 
   const onFormClick = async (e) => {
     e.preventDefault();
@@ -35,12 +37,9 @@ const contact = props => {
 
   return (
     <section className={styles.contact} id="contact">
-      <Heading type="3" color="dark" weight="normal">Contact me</Heading>
+      <Heading type="3" color="dark" weight="normal">{t("Contact me")}</Heading>
       <p className={styles['contact__text']}>
-        If you're interested in working with me or you just wanna say hi you can contact me through this form.
-        I will respond as soon as possible. Thank you for your time! You can also contact me through social media using
-        one of the links below:
-        
+        {t("contact text")}
       </p>
       <div className={[styles['contact__text'], styles['contact__text--red']].join(" ")}>{message}</div>
       <form action="#" className={styles.form}>
@@ -51,7 +50,7 @@ const contact = props => {
               onChange={(e) => setName(e.target.value)}
               name="name"
               className={styles['form__input']}
-              placeholder="Put your name here..."/>
+              placeholder={t("put name here")}/>
           <label htmlFor="name" className={styles['form__label']}>Name</label>
         </div>
         <div className={styles['form__group']}>
@@ -61,7 +60,7 @@ const contact = props => {
               onChange={(e) => setEmail(e.target.value)}
               name="email"
               className={styles['form__input']}
-              placeholder="Put your email here..."/>
+              placeholder={t("put email here")}/>
           <label htmlFor="name" className={styles['form__label']}>Email</label>
         </div>
         <div className={styles['form__group']}>
@@ -70,11 +69,11 @@ const contact = props => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className={styles['form__textarea']}
-              placeholder="Write your message here..." />
+              placeholder={t("put message here")} />
           <label htmlFor="query" className={styles['form__label']}>Message</label>
         </div>
         <Button theme="cta" onClick={onFormClick} disabled={valid()}>
-          Submit <i className={`material-icons ${styles['form__btn-icon']}`}>call_made</i>
+          {t("submit")} <i className={`material-icons ${styles['form__btn-icon']}`}>call_made</i>
         </Button>
       </form>
     </section>

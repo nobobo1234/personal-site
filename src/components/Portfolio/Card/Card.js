@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './Card.module.scss';
+import { useTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = props => {
+  const { t, i18n } = useTranslation();
   return (
       <div className={styles.card}>
         <h4 className={styles['card__heading']}>{props.title}</h4>
@@ -16,7 +18,7 @@ const Card = props => {
           <a href={props.github}>Github</a>
           {props.demo ? <a href={props.demo}>Demo</a> : null}
         </div>
-        <div className={styles['card__used']}>Technologies used:</div>
+        <div className={styles['card__used']}>{t("Technologies used")}</div>
         <div className={styles['card__icons']}>
           {props.technologies.map((e) => (
               // Ugly way of getting rid of the disalignment of the discord logo

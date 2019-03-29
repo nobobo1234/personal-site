@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.scss';
+import { useTranslation } from "react-i18next";
 
 import logo from '../../assets/logo.png'
 import Button from '../Button/Button';
@@ -8,11 +9,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navbar = props => {
   const [icon, setIcon] = useState('sun');
+  const { t, i18n } = useTranslation();
 
   const switchToDark = (e) => {
     (e.target.checked) ? setIcon('moon') : setIcon('sun');
     (e.target.checked) ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
   };
+
+  useEffect(() => {
+    const now = new Date();
+    if(now.getHours() > 18 || now.getHours() < 6) {
+      setIcon('moon');
+      document.body.setAttribute('data-theme', 'dark');
+    }
+  }, []);
 
   return (
       <nav className={styles.nav}>
@@ -22,22 +32,22 @@ const navbar = props => {
         <ul className={styles['nav__links']}>
           <li>
             <Link to="about" className={styles['nav__link']} smooth={true} duration={700}>
-              About me
+              {t("About me")}
             </Link>
           </li>
           <li>
             <Link to="speciality" className={styles['nav__link']} smooth={true} duration={700}>
-              Speciality
+              {t("Speciality")}
             </Link>
           </li>
           <li>
             <Link to="portfolio" className={styles['nav__link']} smooth={true} duration={700}>
-              Portfolio
+              {t("Portfolio")}
             </Link>
           </li>
           <li>
             <Button to="contact" theme="cta">
-              Contact me
+              {t("Contact me")}
             </Button>
           </li>
           <li className={styles.dark}>
