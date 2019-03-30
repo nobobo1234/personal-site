@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Portfolio.module.scss';
 import { useEffect, useState } from 'react';
+import i18n from '../../i18n';
 
 import Heading from '../Heading/Heading';
 import Card from './Card/Card';
@@ -29,7 +30,7 @@ const portfolio = props => {
               demo={project.demo}
               technologies={project.technologies.split(',')}
               img={project.screenshot}>
-              {project.description}
+              {i18n.language === 'en' ? project.description : project['description_dutch']}
             </Card>
         ))}
       </div>

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const contact = props => {
   const [ name, setName ] = useState("");
@@ -49,8 +50,7 @@ const contact = props => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
-              className={styles['form__input']}
-              placeholder={t("put name here")}/>
+              className={styles['form__input']}/>
           <label htmlFor="name" className={styles['form__label']}>Name</label>
         </div>
         <div className={styles['form__group']}>
@@ -59,8 +59,7 @@ const contact = props => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               name="email"
-              className={styles['form__input']}
-              placeholder={t("put email here")}/>
+              className={styles['form__input']}/>
           <label htmlFor="name" className={styles['form__label']}>Email</label>
         </div>
         <div className={styles['form__group']}>
@@ -68,14 +67,34 @@ const contact = props => {
               name="query"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className={styles['form__textarea']}
-              placeholder={t("put message here")} />
+              className={styles['form__textarea']}/>
           <label htmlFor="query" className={styles['form__label']}>Message</label>
         </div>
         <Button theme="cta" onClick={onFormClick} disabled={valid()}>
           {t("submit")} <i className={`material-icons ${styles['form__btn-icon']}`}>call_made</i>
         </Button>
       </form>
+      <div className={styles.social}>
+        <a href="https://twitter.com/noahvanboven" className={styles['social__button']}>
+          <FontAwesomeIcon icon={['fab', 'twitter-square']}/>
+          Twitter
+        </a>
+        <a href="https://instagram.com/noah_vanboven" className={styles['social__button']}>
+          <FontAwesomeIcon icon={['fab', 'instagram']}/>
+          Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/noahvanboven/" className={styles['social__button']}>
+          <FontAwesomeIcon icon={['fab', 'linkedin']}/>
+          Linkedin
+        </a>
+        <a href="https://github.com/nobobo1234" className={styles['social__button']}>
+          <FontAwesomeIcon icon={['fab', 'github']}/>
+          Github
+        </a>
+        <a href="/" className={styles['social__button']}>
+          CV
+        </a>
+      </div>
     </section>
   );
 };

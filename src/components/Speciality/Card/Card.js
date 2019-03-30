@@ -11,7 +11,7 @@ const Card = props => {
       <p className={styles['card__description']}>
         {props.children}
       </p>
-      <div className={styles['card__bold']}>{t("Things I work with")}</div>
+      <div className={styles['card__bold']}>{t("already worked with")}</div>
       <p className={styles['card__work-with']}>{props.workWith.join(', ')}</p>
     </div>
   );
