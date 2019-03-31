@@ -17,7 +17,7 @@ const portfolio = props => {
 
   useEffect(() => {
     fetchData();
-  });
+  }, []);
   return (
     <section className={styles.portfolio} id="portfolio">
       <Heading type="3" color="dark" weight="normal">Portfolio</Heading>
