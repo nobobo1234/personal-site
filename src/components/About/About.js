@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import Heading from '../Heading/Heading';
 import myself from '../../assets/myself.jpg';
 
-const about = props => {
-  const { t, i18n } = useTranslation();
+const about = () => {
+  const { t } = useTranslation();
   return (
       <section className={styles.about} id="about">
         <div className="information">

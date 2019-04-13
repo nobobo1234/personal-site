@@ -7,9 +7,9 @@ import Button from '../Button/Button';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const navbar = props => {
+const navbar = () => {
   const [icon, setIcon] = useState('sun');
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const switchToDark = (e) => {
     (e.target.checked) ? setIcon('moon') : setIcon('sun');

@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import Heading from '../Heading/Heading';
 import Card from './Card/Card';
 
-const speciality = props => {
-  const { t, i18n } = useTranslation();
+const speciality = () => {
+  const { t } = useTranslation();
 
   return (
     <section className={styles.speciality} id="speciality">

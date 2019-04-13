@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import Button from '../Button/Button';
 import Heading from '../Heading/Heading';
 
-const header = props => {
-  const { t, i18n } = useTranslation();
+const header = () => {
+  const { t } = useTranslation();
   return (
     <header className={styles.header}>
       <Heading type="1">Noah van Boven</Heading>

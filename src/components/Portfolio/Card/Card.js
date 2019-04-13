@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = props => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
       <div className={styles.card}>
         <h4 className={styles['card__heading']}>{props.title}</h4>
@@ -15,8 +15,8 @@ const Card = props => {
         </p>
         <div className={styles['card__used']}>Links:</div>
         <div className={styles['card__links']}>
-          <a href={props.github}>Github</a>
-          {props.demo ? <a href={props.demo}>Demo</a> : null}
+          <a href={props.github} target="_blank" rel="noreferrer noopener">Github</a>
+          {props.demo ? <a href={props.demo} target="_blank" rel="noreferrer noopener">Demo</a> : null}
         </div>
         <div className={styles['card__used']}>{t("Technologies used")}</div>
         <div className={styles['card__icons']}>

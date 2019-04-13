@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Portfolio.module.scss';
 import { useEffect, useState } from 'react';
-import i18n from '../../i18n';
+import { useTranslation } from "react-i18next";
 
 import Heading from '../Heading/Heading';
 import Card from './Card/Card';
 
-const portfolio = props => {
+const portfolio = () => {
   const [projects, setProjects] = useState([]);
+  const { i18n } = useTranslation();
 
   const fetchData = async () => {
     const response = await fetch('https://noahvb.nl/portfolio/api.php/records/projects');

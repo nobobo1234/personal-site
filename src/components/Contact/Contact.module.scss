@@ -4,12 +4,47 @@
   background-color: color(var(--background-color));
   grid-column: center-start / center-end;
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__heading {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
   &__text {
     font-size: 1.6rem;
     color: color(var(--text-color));
+    grid-column: 1 / -1;
 
     &--red {
       color: color(var(--text-color-accent));
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1 / span 1;
+    padding: .5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-row: 2 / span 1;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__social-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    @include underline;
+    color: color(var(--text-color));
+    padding: 1rem;
+
+    svg {
+      font-size: 1.8rem;
     }
   }
 }
@@ -18,7 +53,8 @@
   padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-gap: 3rem;
+  grid-column: 1 / -1;
 
   @media only screen and (max-width: $bp-smallest) {
     grid-template-columns: 1fr;
@@ -75,24 +111,4 @@
 
 .invisible {
   display: none;
-}
-
-.social {
-  display: flex;
-  justify-content: space-between;
-
-  &__button:link, &__button:visited {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    text-decoration: none;
-    @include underline;
-    color: color(var(--text-color));
-    padding: 1rem;
-
-    svg {
-      font-size: 1.8rem;
-      margin-right: .5rem;
-    }
-  }
 }
