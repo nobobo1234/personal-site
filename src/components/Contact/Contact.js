@@ -12,7 +12,7 @@ const contact = () => {
   const [ email, setEmail ] = useState("");
   const [ query, setQuery ] = useState("");
   const [ message, setMessage ] = useState("");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const onFormClick = async (e) => {
     e.preventDefault();
@@ -53,7 +53,11 @@ const contact = () => {
             <FontAwesomeIcon icon={['fab', site.icon]}/>
           </a>
         ))}
-        <a href="/" target="_blank" rel="noreferrer noopener" className={styles['contact__social-button']}>
+        <a
+            href={`/cv/CV-${i18n.language}.pdf`}
+            target="_blank"
+            rel="noreferrer noopener"
+            className={styles['contact__social-button']}>
           CV
         </a>
       </div>
