@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Card.module.scss';
 import { useTranslation } from "react-i18next";
+import { iconMapping } from "../../../initIcons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -21,10 +22,18 @@ const Card = props => {
         <div className={styles['card__used']}>{t("Technologies used")}</div>
         <div className={styles['card__icons']}>
           {props.technologies.map((e) => (
+              <div className={styles['card__icon-wrapper']}>
+                {e !== 'discord' ?
+                    <FontAwesomeIcon icon={['fab', e]} key={e} />
+                    :
+                    <FontAwesomeIcon
+                      style={{ marginTop: '1.5px' }}
+                      icon={['fab', e]}
+                      key={e} />
+                }
+                <div className={styles['card__tooltip']}>{iconMapping[e]}</div>
+              </div>
               // Ugly way of getting rid of the disalignment of the discord logo
-              e !== 'discord' ?
-                  <FontAwesomeIcon icon={['fab', e]} key={e} /> :
-                  <FontAwesomeIcon style={{ marginTop: '1.5px' }} icon={['fab', e]} key={e} />
           ))}
         </div>
       </div>

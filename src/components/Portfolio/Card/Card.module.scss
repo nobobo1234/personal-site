@@ -4,7 +4,7 @@
   font-size: 1.6rem;
   background-color: color(var(--background-color));
   border-radius: 1.5rem;
-  overflow: hidden;
+  overflow: visible;
   padding: 2rem;
 
   display: flex;
@@ -48,14 +48,35 @@
   &__icons {
     display: flex;
     margin: .5rem 0;
+  }
+
+  &__icon-wrapper {
+    position: relative;
 
     svg {
       font-size: 2.5rem;
       color: color(var(--text-color)) !important;
+    }
 
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
+    &:not(:last-child) {
+      margin-right: 1rem;
     }
   }
+
+  &__tooltip {
+    display: none;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -5rem;
+    white-space: nowrap;
+    transform: translate(-30%);
+    border: 1px solid color(var(--text-color-accent));
+    background-color: color(var(--background-color));
+    padding: 1rem;
+  }
+
+  &__icon-wrapper:hover &__tooltip {
+    display: block;
+  }
+
 }
