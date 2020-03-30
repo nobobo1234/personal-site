@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Heading from '../Heading/Heading';
 import myself from '../../assets/myself.jpg';
 
-const about = () => {
+const About = () => {
   const { t } = useTranslation();
   return (
       <section className={styles.about} id="about">
@@ -20,4 +20,4 @@ const about = () => {
   )
 };
 
-export default about;
+export default About;

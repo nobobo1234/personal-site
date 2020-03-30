@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Button from '../Button/Button';
 import Heading from '../Heading/Heading';
 
-const header = () => {
+const Header = () => {
   const { t } = useTranslation();
   return (
     <header className={styles.header}>
@@ -21,4 +21,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

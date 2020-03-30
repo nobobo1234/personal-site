@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import { useTranslation } from "react-i18next";
 
-const footer = () => {
+const Footer = () => {
   const { i18n } = useTranslation();
 
   const changeLanguage = async () => {
@@ -20,4 +20,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

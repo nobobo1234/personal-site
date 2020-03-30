@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import Heading from '../Heading/Heading';
 import Card from './Card/Card';
 
-const speciality = () => {
+const Speciality = () => {
   const { t } = useTranslation();
 
   return (
@@ -35,4 +35,4 @@ const speciality = () => {
   );
 };
 
-export default speciality;
+export default Speciality;

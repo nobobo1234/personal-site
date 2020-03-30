@@ -7,7 +7,7 @@ import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const contact = () => {
+const Contact = () => {
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ query, setQuery ] = useState("");
@@ -97,4 +97,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

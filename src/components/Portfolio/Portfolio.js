@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import Heading from '../Heading/Heading';
 import Card from './Card/Card';
 
-const portfolio = () => {
+const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const { i18n } = useTranslation();
 
@@ -39,4 +39,4 @@ const portfolio = () => {
   );
 };
 
-export default portfolio;
+export default Portfolio;

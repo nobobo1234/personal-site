@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const navbar = () => {
+const Navbar = () => {
   const [icon, setIcon] = useState('sun');
   const { t } = useTranslation();
 
@@ -61,4 +61,4 @@ const navbar = () => {
   )
 };
 
-export default navbar;
+export default Navbar;
